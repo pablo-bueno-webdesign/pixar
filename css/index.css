@@ -1,0 +1,231 @@
+/* RESET */
+/* Reset CSS / Normalizar CSS */
+:root{
+    font-size : 100% ;                  
+    font-family: system-ui, sans-serif; 
+    scroll-behavior : smooth ;    
+}
+*{
+    margin:0;
+    padding:0;
+    border: 0;
+    box-sizing: border-box;
+}
+li{
+    list-style: none;
+}
+a{
+    display: block;
+    color:inherit;
+    text-decoration: none;
+}
+p a{
+    display: inline;
+}
+h1 , h2 , h3 , h4 , h5 , h6 , strong , em , mark, pre, code{
+    font:inherit;
+}
+mark{
+    background-color:transparent;
+}
+picture , img, video , iframe {
+    display: block;
+    max-width: 100%;
+    width: 100%;
+    height: initial;
+}
+svg{
+    display: block;
+    width: initial;
+    height: initial;
+    fill: currentColor;
+}
+
+form , input , select , option , textarea , label , fieldset , legend , button{
+    display: block;
+    font:inherit;
+    background-color: initial;
+}
+fieldset {
+    border : none ;
+}
+button , label{
+    cursor: pointer;
+}
+
+/* // RESET */
+
+
+/* CONTENIDO */
+
+body {
+    background-color: rgb(234, 234, 234);
+}
+
+
+.header {
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    background-color: white;
+    
+    padding: 15px 60px;
+    .logo {
+        width: 20%;
+    }
+    .logo img{
+        min-width: 100px;
+        max-height: 20px;
+        object-fit: contain;
+        object-position: 0% 50%;
+    }
+    .hamburger-menu {
+        display: none;
+        @media (max-width: 960px) {
+           display: block; 
+        }
+    }
+    .menu-links {
+        display: flex;
+        flex-flow: row nowrap;
+        gap: 25px;
+        @media (max-width: 960px) {
+            display: none;
+        }
+    }
+}
+
+
+.hero {
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    margin-bottom: 10vh;
+    background: url("../assets/insideout-fondo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+
+    .hero-title {
+        width: 80%;
+        @media (max-width: 960px) {
+            width: 95%;
+        }
+    }
+    .hero-title img {
+        object-fit: contain;
+        max-height: 80vh;
+        @media (max-width: 960px) {
+            max-height: 100vh;
+        }
+    }
+    @media (max-width: 960px) {
+        min-height: 50vh;
+    }
+}
+
+
+.projects {
+    margin-bottom: 10vh;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20vh;
+    .project-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        width: 70%;   
+        @media (max-width: 960px) {
+            flex-flow: column;
+        }
+    }
+
+    .project {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-between;
+        align-items: center;
+        gap: 14px;
+        .project-img {
+            border-radius: 20px;
+            transform: scale(1);
+            transition: 0.6s;
+            &:hover {
+                transform: scale(1.03);
+            }
+        }
+        .project-title {
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+    }
+}
+
+.footer {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+
+    .rrss {
+        margin-bottom: 20px;
+
+        .rrss-list {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+
+        }
+        .rrss-link {
+            width: 35px;
+            height: 35px;
+
+        }
+    }
+    .privacy {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 20px;
+        .privacy-list {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            a {
+                text-transform: uppercase;
+                text-decoration: underline;
+            }
+        @media (max-width: 960px) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        }
+    }
+    .copyright {
+        margin-bottom: 40px;
+    }
+    .warning {
+        color: green;
+        background-color: lightgray;
+        border: solid 1px green;
+        padding: 15px 20px;
+        margin-bottom: 40px;
+
+        transition: 0.4s;
+        &:hover {
+            color: black;
+            background-color: lightgray;
+            border: solid 1px black;
+            transform: scale(0.98);
+        }
+
+    }
+}
